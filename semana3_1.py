@@ -1,3 +1,4 @@
+#Programación POO -  Semana 3
 class ClimaSemanal:
     def _init_(self):
         self.temperaturas = []
