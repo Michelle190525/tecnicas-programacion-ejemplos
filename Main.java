@@ -1,32 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.geston_de_empleados;
-
 /**
- *
- * @author USUARIO
+ * Clase principal para probar los constructores.
  */
 public class Main {
     public static void main(String[] args) {
-        // Crear objeto de Persona
-        PERSONA persona1 = new PERSONA("Ana", 30);
+        // Usando constructor por defecto
+        Persona persona1 = new Persona();
         persona1.mostrarInformacion();
 
-        System.out.println("----------------------");
+        // Usando constructor parametrizado
+        Persona persona2 = new Persona("Ana", 30);
+        persona2.mostrarInformacion();
 
-        // Crear objeto de Empleado (Herencia)
-        Empleado empleado1 = new Empleado("Carlos", 35, 1200.50);
-        empleado1.mostrarInformacion(); // Polimorfismo (método sobrescrito)
+        // Estudiante con constructor por defecto
+        Estudiante estudiante1 = new Estudiante();
+        estudiante1.mostrarInformacion();
 
-        System.out.println("----------------------");
-
-        // Uso de Encapsulación: modificar atributos a través de métodos set
-        empleado1.setSalario(1350.75);
-        System.out.println("Nuevo salario de " + empleado1.getNombre() + ": $" + empleado1.getSalario());
+        // Estudiante con constructor parametrizado (sobrecarga)
+        Estudiante estudiante2 = new Estudiante("Carlos", 22, "Ingeniería");
+        estudiante2.mostrarInformacion();
     }
 }
-
-    
 
